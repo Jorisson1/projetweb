@@ -1,0 +1,22 @@
+{{define "pendu"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ma page de test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/web.css">
+</head>
+<body>
+    {{.Pseudo}}
+    {{.Motatrouver}}
+    <form action="/pendutraitement" method="post">
+        <label for="guess">Entrer votre Proposition</label>
+        <input type="text" id="guess" name="guess" required>
+        <button type="submit">Envoyer</button>
+        </form>
+        <img src="/static/image/{{.Nberreur}}.png" alt="">
+
+</body>
+{{end}}
